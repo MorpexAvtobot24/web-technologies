@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Анкета — Улюблені галюциногенні гриби</title>
+</head>
+<body>
+
+  <h1 align="center">Анкета для дослідження улюблених галюциногенних грибів</h1>
+
+  <form action="" method="get" accept-charset="utf-8">
+    <fieldset>
+      <legend>Особисті дані</legend>
+
+      <label for="fname">Ім'я:</label><br>
+      <input id="fname" name="fname" type="text" placeholder="Введіть ваше ім'я" tabindex="1" required value=""><br><br>
+
+      <label for="lname">Прізвище:</label><br>
+      <input id="lname" name="lname" type="text" placeholder="Введіть ваше прізвище" tabindex="2" required value=""><br><br>
+
+      <label for="emailA">Email:</label><br>
+      <input id="emailA" name="email" type="email" placeholder="example@mail.com"
+             autocomplete="off"
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+             title="Введіть коректну електронну адресу"
+             tabindex="3" required><br><br>
+
+      <label for="phoneA">Мобільний номер:</label><br>
+      <input id="phoneA" name="phone" type="tel" placeholder="+380XXXXXXXXX"
+             pattern="^\+?\d{9,15}$"
+             title="Номер телефону: лише цифри, можливо '+' на початку"
+             tabindex="4" required><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Ваш досвід з галюциногенними грибами</legend>
+
+      <label for="fave_mushroom">Улюблений галюциногенний гриб:</label><br>
+      <select id="fave_mushroom" name="fave_mushroom" tabindex="5" required>
+        <option value="psilocybe_cubensis">Psilocybe Cubensis</option>
+        <option value="psilocybe_semilanceata">Psilocybe Semilanceata</option>
+        <option value="psilocybe_pelliculosa">Psilocybe Pelliculosa</option>
+        <option value="amanita_muscaria">Amanita Muscaria</option>
+        <option value="panaeolus_cyanescens">Panaeolus Cyanescens</option>
+      </select><br><br>
+
+      <label for="experience">Скільки разів ви вживали галюциногенні гриби?</label><br>
+      <input id="experience" name="experience" type="number" placeholder="Введіть кількість" min="0" tabindex="6" required><br><br>
+
+      <label for="best_trip">Яка ваша найкраща подорож (досвід) з галюциногенними грибами?</label><br>
+      <textarea id="best_trip" name="best_trip" placeholder="Опишіть найкращий досвід" rows="4" cols="50" tabindex="7"></textarea><br><br>
+
+      <label for="worst_trip">Який ваш найгірший досвід з галюциногенними грибами?</label><br>
+      <textarea id="worst_trip" name="worst_trip" placeholder="Опишіть найгірший досвід" rows="4" cols="50" tabindex="8"></textarea><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Суб'єктивні впливи та переваги</legend>
+
+      <label for="mental_effects">Які психічні ефекти ви відчували під час вживання?</label><br>
+      <textarea id="mental_effects" name="mental_effects" placeholder="Опишіть психічні ефекти" rows="4" cols="50" tabindex="9"></textarea><br><br>
+
+      <label for="physical_effects">Які фізичні ефекти ви відчували під час вживання?</label><br>
+      <textarea id="physical_effects" name="physical_effects" placeholder="Опишіть фізичні ефекти" rows="4" cols="50" tabindex="10"></textarea><br><br>
+
+      <label for="mushroom_preference">Як часто ви споживаєте гриби?</label><br>
+      <select id="mushroom_preference" name="mushroom_preference" tabindex="11" required>
+        <option value="rarely">Рідко</option>
+        <option value="occasionally">Іноді</option>
+        <option value="frequently">Часто</option>
+        <option value="very_often">Дуже часто</option>
+      </select><br><br>
+
+      <label for="other_mushrooms">Чи пробували ви інші галюциногенні гриби? Якщо так, то які?</label><br>
+      <textarea id="other_mushrooms" name="other_mushrooms" placeholder="Перерахуйте інші гриби" rows="4" cols="50" tabindex="12"></textarea><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Додаткові питання</legend>
+
+      <label for="future_experimentation">Чи плануєте ви експериментувати з галюциногенними грибами в майбутньому?</label><br>
+      <input type="radio" name="future_experimentation" value="yes" required> Так
+      <input type="radio" name="future_experimentation" value="no" required> Ні<br><br>
+
+      <label for="recommendation">Чи рекомендуєте ви вживати галюциногенні гриби іншим?</label><br>
+      <input type="radio" name="recommendation" value="yes" required> Так
+      <input type="radio" name="recommendation" value="no" required> Ні<br><br>
+
+    </fieldset>
+
+    <p>
+      <button type="submit" tabindex="13">Відправити</button>
+      <button type="reset" tabindex="14">Скинути</button>
+    </p>
+  </form>
+
+  <hr>
+
+  <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+    <fieldset>
+      <legend>Завантаження файлів</legend>
+
+      <label for="audio">Завантажте аудіофайл з вашими спогадами або досвідом:</label><br>
+      <input id="audio" name="audio_files[]" type="file"
+             accept="audio/*"
+             multiple
+             tabindex="15"><br>
+      <small>Допускаються лише аудіофайли.</small><br><br>
+
+      <button type="submit" tabindex="16">Відправити</button>
+      <button type="reset" tabindex="17">Скинути</button>
+
+    </fieldset>
+  </form>
+
+  <hr>
+
+</body>
+</html>
