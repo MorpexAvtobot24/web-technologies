@@ -36,7 +36,7 @@ section > p {
 
 
 li > ul {
-    list-style-image: url("bullet.png"); 
+    list-style-image: url("li.svg"); 
 }
 
 
