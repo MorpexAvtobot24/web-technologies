@@ -1,0 +1,51 @@
+/* Загальні стилі для всього контенту */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* Стилі для абзаців */
+p {
+    color: green;
+    text-align: center;
+}
+
+/* Стилі для блочних елементів */
+div {
+    text-align: justify;
+}
+
+/* Стилі для 1-го та 3-го абзаців */
+.red-text {
+    color: red;
+}
+
+/* Стилі для заборони переносу рядка у 1-му абзаці */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* Стилі для другого абзацу з ідентифікатором */
+#italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Тінь до тексту */
+.shadow-text {
+    text-shadow: 5px -5px 3px #000;
+}
+
+/* Стилі для верхнього регістру і перекресленого тексту */
+.upper-case {
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-indent: 50px;
+}
+
+/* Стилі для інтервалів між літерами і словами */
+.spacing {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}

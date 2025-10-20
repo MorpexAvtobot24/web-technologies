@@ -5,95 +5,117 @@
   <title>Анкета — Улюблені галюциногенні гриби</title>
 </head>
 <body>
+<div align="center">
 
-  <h1 align="center">Анкета для дослідження улюблених галюциногенних грибів</h1>
+  <h1>Анкета для дослідження улюблених галюциногенних грибів</h1>
 
   <form action="" method="get" accept-charset="utf-8">
     <fieldset>
       <legend>Особисті дані</legend>
 
       <label for="fname">Ім'я:</label><br>
-      <input id="fname" name="fname" type="text" placeholder="Введіть ваше ім'я" tabindex="1" required value=""><br><br>
+      <input id="fname" name="fname" type="text" placeholder="Введіть ваше ім'я" tabindex="1" required><br><br>
 
       <label for="lname">Прізвище:</label><br>
-      <input id="lname" name="lname" type="text" placeholder="Введіть ваше прізвище" tabindex="2" required value=""><br><br>
+      <input id="lname" name="lname" type="text" placeholder="Введіть ваше прізвище" tabindex="2" required><br><br>
 
       <label for="emailA">Email:</label><br>
-      <input id="emailA" name="email" type="email" placeholder="example@mail.com"
-             autocomplete="off"
-             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-             title="Введіть коректну електронну адресу"
-             tabindex="3" required><br><br>
+      <input id="emailA" name="email" type="email" placeholder="example@mail.com" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Введіть коректну електронну адресу" tabindex="3" required><br><br>
 
       <label for="phoneA">Мобільний номер:</label><br>
-      <input id="phoneA" name="phone" type="tel" placeholder="+380XXXXXXXXX"
-             pattern="^\+?\d{9,15}$"
-             title="Номер телефону: лише цифри, можливо '+' на початку"
-             tabindex="4" required><br><br>
+      <input id="phoneA" name="phone" type="tel" placeholder="+380XXXXXXXXX" pattern="^\+?\d{9,15}$" title="Номер телефону: лише цифри, можливо '+' на початку" tabindex="4" required><br><br>
+             
+      <label for="password">Пароль:</label><br>
+      <input type="password" id="password" name="password" required tabindex="5"
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+             title="Мінімум 6 символів, одна велика, одна мала літера та одна цифра"><br><br>
+      
+      <label for="birthdate">Дата першого досвіду:</label><br>
+      <input type="date" id="birthdate" name="birthdate" tabindex="6"><br><br>
+
+      <label for="location">Звідки ви? (оберіть або введіть своє)</label><br>
+      <input list="locations" id="location" name="location" placeholder="Наприклад, Карпати" tabindex="7">
+      <datalist id="locations">
+          <option value="Карпати">
+          <option value="Київська область">
+          <option value="Закордон">
+      </datalist><br><br>
 
     </fieldset>
 
     <fieldset>
-      <legend>Ваш досвід з галюциногенними грибами</legend>
+      <legend>Ваш досвід</legend>
 
       <label for="fave_mushroom">Улюблений галюциногенний гриб:</label><br>
-      <select id="fave_mushroom" name="fave_mushroom" tabindex="5" required>
-        <option value="psilocybe_cubensis">Psilocybe Cubensis</option>
+      <select id="fave_mushroom" name="fave_mushroom" tabindex="8" required>
+        <option value="psilocybe_cubensis" selected>Psilocybe Cubensis (за замовчуванням)</option>
         <option value="psilocybe_semilanceata">Psilocybe Semilanceata</option>
         <option value="psilocybe_pelliculosa">Psilocybe Pelliculosa</option>
         <option value="amanita_muscaria">Amanita Muscaria</option>
         <option value="panaeolus_cyanescens">Panaeolus Cyanescens</option>
       </select><br><br>
 
-      <label for="experience">Скільки разів ви вживали галюциногенні гриби?</label><br>
-      <input id="experience" name="experience" type="number" placeholder="Введіть кількість" min="0" tabindex="6" required><br><br>
-
-      <label for="best_trip">Яка ваша найкраща подорож (досвід) з галюциногенними грибами?</label><br>
-      <textarea id="best_trip" name="best_trip" placeholder="Опишіть найкращий досвід" rows="4" cols="50" tabindex="7"></textarea><br><br>
-
-      <label for="worst_trip">Який ваш найгірший досвід з галюциногенними грибами?</label><br>
-      <textarea id="worst_trip" name="worst_trip" placeholder="Опишіть найгірший досвід" rows="4" cols="50" tabindex="8"></textarea><br><br>
-
+      <label for="preferred_setting">Бажане оточення для досвіду (утримуйте Ctrl для вибору кількох):</label><br>
+      <select id="preferred_setting" name="preferred_setting" multiple size="6" tabindex="9">
+          <optgroup label="Природа">
+              <option value="forest">Ліс</option>
+              <option value="mountains">Гори</option>
+              <option value="beach">Пляж</option>
+          </optgroup>
+          <optgroup label="Приміщення">
+              <option value="home_alone">Вдома наодинці</option>
+              <option value="home_friends">Вдома з друзями</option>
+              <option value="club">У клубі</option>
+          </optgroup>
+          <optgroup label="Заходи">
+              <option value="festival">На фестивалі</option>
+              <option value="concert">На концерті</option>
+              <option value="party">На вечірці</option>
+          </optgroup>
+          <optgroup label="Інше">
+              <option value="meditation">Під час медитації</option>
+              <option value="creative">Для творчості</option>
+              <option value="therapeutic">В терапевтичних цілях</option>
+          </optgroup>
+      </select><br><br>
+      
+      <label for="best_trip">Опишіть найкращий досвід:</label><br>
+      <textarea id="best_trip" name="best_trip" placeholder="Опис..." rows="4" cols="50" tabindex="10"></textarea><br><br>
+      
     </fieldset>
 
     <fieldset>
-      <legend>Суб'єктивні впливи та переваги</legend>
+      <legend>Суб'єктивні впливи</legend>
 
-      <label for="mental_effects">Які психічні ефекти ви відчували під час вживання?</label><br>
-      <textarea id="mental_effects" name="mental_effects" placeholder="Опишіть психічні ефекти" rows="4" cols="50" tabindex="9"></textarea><br><br>
-
-      <label for="physical_effects">Які фізичні ефекти ви відчували під час вживання?</label><br>
-      <textarea id="physical_effects" name="physical_effects" placeholder="Опишіть фізичні ефекти" rows="4" cols="50" tabindex="10"></textarea><br><br>
-
-      <label for="mushroom_preference">Як часто ви споживаєте гриби?</label><br>
-      <select id="mushroom_preference" name="mushroom_preference" tabindex="11" required>
-        <option value="rarely">Рідко</option>
-        <option value="occasionally">Іноді</option>
-        <option value="frequently">Часто</option>
-        <option value="very_often">Дуже часто</option>
-      </select><br><br>
-
-      <label for="other_mushrooms">Чи пробували ви інші галюциногенні гриби? Якщо так, то які?</label><br>
-      <textarea id="other_mushrooms" name="other_mushrooms" placeholder="Перерахуйте інші гриби" rows="4" cols="50" tabindex="12"></textarea><br><br>
-
+      <p>Які ефекти ви зазвичай відчуваєте? (можна вибрати декілька)</p>
+      <input type="checkbox" id="visuals" name="effects" value="visuals" tabindex="11" checked>
+      <label for="visuals">Візуальні галюцинації</label><br>
+      <input type="checkbox" id="euphoria" name="effects" value="euphoria" tabindex="12">
+      <label for="euphoria">Ейфорія</label><br>
+      <input type="checkbox" id="philosophy" name="effects" value="philosophy" tabindex="13">
+      <label for="philosophy">Філософські роздуми</label><br>
+      <input type="checkbox" id="anxiety" name="effects" value="anxiety" tabindex="14">
+      <label for="anxiety">Тривожність</label><br><br>
     </fieldset>
 
     <fieldset>
       <legend>Додаткові питання</legend>
 
-      <label for="future_experimentation">Чи плануєте ви експериментувати з галюциногенними грибами в майбутньому?</label><br>
-      <input type="radio" name="future_experimentation" value="yes" required> Так
-      <input type="radio" name="future_experimentation" value="no" required> Ні<br><br>
+      <label>Чи плануєте ви експериментувати в майбутньому?</label><br>
+      <input type="radio" name="future_experimentation" value="yes" required checked> Так
+      <input type="radio" name="future_experimentation" value="no" required> Ні
+      <input type="radio" name="future_experimentation" value="maybe" required> Не визначився/лась<br><br>
 
-      <label for="recommendation">Чи рекомендуєте ви вживати галюциногенні гриби іншим?</label><br>
+      <label>Чи рекомендуєте ви вживати гриби іншим?</label><br>
       <input type="radio" name="recommendation" value="yes" required> Так
-      <input type="radio" name="recommendation" value="no" required> Ні<br><br>
+      <input type="radio" name="recommendation" value="no" required> Ні
+      <input type="radio" name="recommendation" value="not_sure" required> Не визначився/лась<br><br>
 
     </fieldset>
 
     <p>
-      <button type="submit" tabindex="13">Відправити</button>
-      <button type="reset" tabindex="14">Скинути</button>
+      <button type="submit" tabindex="15">Відправити</button>
+      <button type="reset" tabindex="16">Скинути</button>
     </p>
   </form>
 
@@ -102,21 +124,13 @@
   <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8">
     <fieldset>
       <legend>Завантаження файлів</legend>
-
-      <label for="audio">Завантажте аудіофайл з вашими спогадами або досвідом:</label><br>
-      <input id="audio" name="audio_files[]" type="file"
-             accept="audio/*"
-             multiple
-             tabindex="15"><br>
+      <label for="audio">Завантажте аудіофайл з вашими спогадами:</label><br>
+      <input id="audio" name="audio_files[]" type="file" accept="audio/*" multiple tabindex="17"><br>
       <small>Допускаються лише аудіофайли.</small><br><br>
-
-      <button type="submit" tabindex="16">Відправити</button>
-      <button type="reset" tabindex="17">Скинути</button>
-
+      <button type="submit" tabindex="18">Відправити</button>
+      <button type="reset" tabindex="19">Скинути</button>
     </fieldset>
   </form>
-
-  <hr>
-
+  </div>
 </body>
 </html>

@@ -1,0 +1,76 @@
+/* Загальні стилі для всього контенту */
+body {
+    font-family: Arial, sans-serif; /* Основний шрифт для всього тексту */
+    font-size: 18px;
+    line-height: 1.4; /* Зменшений міжрядковий інтервал */
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Центрування вмісту */
+.center {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Стилі для заголовка h1 (червоний текст) */
+.red-text {
+    font-family: "Times New Roman", Times, serif; /* Шрифт для заголовка */
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Стилі для курсивного тексту */
+.italic {
+    font-family: "Times New Roman", Times, serif; /* Курсив з "Times New Roman" */
+    font-style: italic;
+}
+
+/* Стилі для жирного тексту */
+b {
+    font-family: "Times New Roman", Times, serif; /* Жирний текст з "Times New Roman" */
+    font-weight: bold;
+}
+
+/* Стилі для підкресленого тексту */
+u {
+    text-decoration: underline;
+}
+
+/* Стилі для перекресленого тексту */
+s {
+    text-decoration: line-through;
+}
+
+/* Стилі для маркованого тексту */
+mark {
+    background-color: yellow;
+}
+
+/* Стилі для горизонтальної лінії */
+.green-line {
+    border: 5px solid green;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Стилі для підкресленого курсивного тексту */
+.emphasis {
+    font-family: "Times New Roman", Times, serif; /* Шрифт для тексту "Успіх смачних млинців" */
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Стилі для абзаців між інгредієнтами */
+p {
+    font-family: "Times New Roman", Times, serif; /* Всі абзаци повинні використовувати цей шрифт */
+    margin: 0; /* Забираємо зайві відступи */
+    padding: 5px 0; /* Додаємо вертикальні відступи між рядками */
+}
+
+/* Стилі для всіх інгредієнтів */
+div {
+    font-family: "Times New Roman", Times, serif; /* Всі текстові елементи в інгредієнтах повинні використовувати цей шрифт */
+}
