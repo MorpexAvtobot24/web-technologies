@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Анкета — Улюблені галюциногенні гриби</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>Анкета для дослідження улюблених галюциногенних грибів</h1>
+
+    <form action="" method="get" accept-charset="utf-8" class="form">
+      <fieldset class="form-section">
+        <legend>Особисті дані</legend>
+
+        <label for="fname">Ім'я:</label>
+        <input id="fname" name="fname" type="text" placeholder="Введіть ваше ім'я" required tabindex="1" />
+
+        <label for="lname">Прізвище:</label>
+        <input id="lname" name="lname" type="text" placeholder="Введіть ваше прізвище" required tabindex="2" />
+
+        <label for="emailA">Email:</label>
+        <input id="emailA" name="email" type="email" placeholder="example@mail.com" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Введіть коректну електронну адресу" required tabindex="3" />
+
+        <label for="phoneA">Мобільний номер:</label>
+        <input id="phoneA" name="phone" type="tel" placeholder="+380XXXXXXXXX" pattern="^\+?\d{9,15}$" title="Номер телефону: лише цифри, можливо '+' на початку" required tabindex="4" />
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required tabindex="5"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+               title="Мінімум 6 символів, одна велика, одна мала літера та одна цифра" />
+
+        <label for="birthdate">Дата першого досвіду:</label>
+        <input type="date" id="birthdate" name="birthdate" tabindex="6" />
+
+        <label for="location">Звідки ви? (оберіть або введіть своє)</label>
+        <input list="locations" id="location" name="location" placeholder="Наприклад, Карпати" tabindex="7">
+        <datalist id="locations">
+          <option value="Карпати">
+          <option value="Київська область">
+          <option value="Закордон">
+        </datalist>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Ваш досвід</legend>
+
+        <label for="fave_mushroom">Улюблений галюциногенний гриб:</label>
+        <select id="fave_mushroom" name="fave_mushroom" tabindex="8" required>
+          <option value="psilocybe_cubensis" selected>Psilocybe Cubensis (за замовчуванням)</option>
+          <option value="psilocybe_semilanceata">Psilocybe Semilanceata</option>
+          <option value="psilocybe_pelliculosa">Psilocybe Pelliculosa</option>
+          <option value="amanita_muscaria">Amanita Muscaria</option>
+          <option value="panaeolus_cyanescens">Panaeolus Cyanescens</option>
+        </select>
+
+        <label for="preferred_setting">Бажане оточення для досвіду (утримуйте Ctrl для вибору кількох):</label>
+        <select id="preferred_setting" name="preferred_setting" multiple size="6" tabindex="9">
+          <optgroup label="Природа">
+            <option value="forest">Ліс</option>
+            <option value="mountains">Гори</option>
+            <option value="beach">Пляж</option>
+          </optgroup>
+          <optgroup label="Приміщення">
+            <option value="home_alone">Вдома наодинці</option>
+            <option value="home_friends">Вдома з друзями</option>
+            <option value="club">У клубі</option>
+          </optgroup>
+          <optgroup label="Заходи">
+            <option value="festival">На фестивалі</option>
+            <option value="concert">На концерті</option>
+            <option value="party">На вечірці</option>
+          </optgroup>
+          <optgroup label="Інше">
+            <option value="meditation">Під час медитації</option>
+            <option value="creative">Для творчості</option>
+            <option value="therapeutic">В терапевтичних цілях</option>
+          </optgroup>
+        </select>
+
+        <label for="best_trip">Опишіть найкращий досвід:</label>
+        <textarea id="best_trip" name="best_trip" placeholder="Опис..." rows="4" cols="50" tabindex="10"></textarea>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Суб'єктивні впливи</legend>
+
+        <p>Які ефекти ви зазвичай відчуваєте? (можна вибрати декілька)</p>
+        <input type="checkbox" id="visuals" name="effects" value="visuals" tabindex="11" checked>
+        <label for="visuals">Візуальні галюцинації</label><br>
+        <input type="checkbox" id="euphoria" name="effects" value="euphoria" tabindex="12">
+        <label for="euphoria">Ейфорія</label><br>
+        <input type="checkbox" id="philosophy" name="effects" value="philosophy" tabindex="13">
+        <label for="philosophy">Філософські роздуми</label><br>
+        <input type="checkbox" id="anxiety" name="effects" value="anxiety" tabindex="14">
+        <label for="anxiety">Тривожність</label>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Додаткові питання</legend>
+
+        <label>Чи плануєте ви експериментувати в майбутньому?</label><br>
+        <input type="radio" name="future_experimentation" value="yes" required checked> Так
+        <input type="radio" name="future_experimentation" value="no" required> Ні
+        <input type="radio" name="future_experimentation" value="maybe" required> Не визначився/лась<br><br>
+
+        <label>Чи рекомендуєте ви вживати гриби іншим?</label><br>
+        <input type="radio" name="recommendation" value="yes" required> Так
+        <input type="radio" name="recommendation" value="no" required> Ні
+        <input type="radio" name="recommendation" value="not_sure" required> Не визначився/лась<br><br>
+
+      </fieldset>
+
+      <p>
+        <button type="submit" tabindex="15">Відправити</button>
+        <button type="reset" tabindex="16">Скинути</button>
+      </p>
+    </form>
+
+  </div>
+</body>
+</html>

@@ -16,18 +16,18 @@ ul ul {
 
 
 
-.berries-list {
+.mark-square {
     list-style-type: square;
 }
 
 
 
-.vegetables-list {
+.mark-check {
     list-style-image: url('li.svg');
 }
 
 
-.berries-list a {
+.mark-none a {
     text-decoration: none;
 }
 
